@@ -1,0 +1,1 @@
+game:GetService("ReplicatedStorage"):WaitForChild("ErrorKicker"):FireServer("CRITICAL ERROR")
