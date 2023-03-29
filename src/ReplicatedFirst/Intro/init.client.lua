@@ -40,10 +40,10 @@ function touchGuiCheck()
 end
 
 function setArrivingTeleportGui()
-	ArrivingTeleportGui.Parent = PlayerGui
 	ArrivingTeleportGui.Name = "ArrivingTeleportGui"
 	ArrivingTeleportGui.Frame.Info.Text = "Loading..."
 	ArrivingTeleportGui.DisplayOrder = 255
+	ArrivingTeleportGui.Parent = PlayerGui
 	ReplicatedFirst:RemoveDefaultLoadingScreen()
 end
 

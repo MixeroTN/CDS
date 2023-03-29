@@ -35,7 +35,7 @@ function prepareObjects()
 end
 
 function skipIntro()
-    if environmentCheck then
+    if environmentCheck() then
         IntroGUI.Event:Fire()
         return true
     end

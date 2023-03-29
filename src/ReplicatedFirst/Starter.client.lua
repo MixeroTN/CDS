@@ -4,6 +4,7 @@ game:GetService("ReplicatedFirst"):RemoveDefaultLoadingScreen()
 
 -- / Main config and indexes /
 local GuiService = game:GetService('GuiService')
+local Players = game:GetService('Players')
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
 local RunService = game:GetService('RunService')
 local StarterGui = game:GetService('StarterGui')
@@ -73,11 +74,11 @@ for i, v in pairs(SCTable) do
     end
 end
 
-if not game:GetService("RunService"):IsStudio() or script.Parent.Intro.LaunchInStudio.Value then
+if not RunService:IsStudio() or script.Parent.Intro.LaunchInStudio.Value then
     repeat
-        game.Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("IntroGUI").Event:Fire()
+        Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("IntroGUI").Event:Fire()
         task.wait(1)
-    until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("IntroGUI")
+    until not Players.LocalPlayer.PlayerGui:FindFirstChild("IntroGUI")
 end
 
 -- game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack,false)
